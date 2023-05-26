@@ -38,6 +38,7 @@ public class EjerciciosEgg extends javax.swing.JFrame {
         initComponents();
          doc = jTextPane1.getStyledDocument();
          this.myExercise = new DefaultExercise(jTextPane1,jTextField1,doc);
+         this.myExercise.AddTextToPane("Bienvenido a la app de ejercicios de Egg en Java...");
              Image image = Toolkit.getDefaultToolkit().getImage("src/image.png");
             ImageIcon icon = new ImageIcon(image);
             setIconImage(image);
