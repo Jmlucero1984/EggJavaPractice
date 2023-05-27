@@ -18,8 +18,10 @@ public class Ejercicio1 extends Exercise{
 
     public Ejercicio1(JTextPane jTextPane1, JTextField jTextField1,Document doc) {
         super(jTextPane1, jTextField1,doc);
-        AddTextToPane("Bienvenido al Ejercicio 1");
-        AddTextToPane("Ingrese dos numeros para calcular la suma");
+        SimpleAttributeSet set = new SimpleAttributeSet();
+        StyleConstants.setForeground(set, Color.cyan);
+        AddTextToPane("Bienvenido al Ejercicio 1",set);
+        AddTextToPane("Ingrese dos numeros para calcular la suma",set);
     }
 
     

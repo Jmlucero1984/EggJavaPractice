@@ -102,6 +102,7 @@ public class EjerciciosEgg extends javax.swing.JFrame {
         jPanel2 = new javax.swing.JPanel();
         buttonEx09 = new java.awt.Button();
         buttonEx10 = new java.awt.Button();
+        buttonEx11 = new java.awt.Button();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -219,15 +220,24 @@ public class EjerciciosEgg extends javax.swing.JFrame {
             }
         });
 
+        buttonEx11.setActionCommand("Ex11");
+        buttonEx11.setLabel("Ex 11");
+        buttonEx11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonEx11ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(buttonEx09, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonEx10, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(buttonEx09, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
+                    .addComponent(buttonEx10, javax.swing.GroupLayout.DEFAULT_SIZE, 51, Short.MAX_VALUE)
+                    .addComponent(buttonEx11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap(89, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -237,6 +247,8 @@ public class EjerciciosEgg extends javax.swing.JFrame {
                 .addComponent(buttonEx09, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(23, 23, 23)
                 .addComponent(buttonEx10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(buttonEx11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -331,6 +343,11 @@ public class EjerciciosEgg extends javax.swing.JFrame {
         myExercise = new Pruebas(jTextPane1, jTextField1, doc);
     }//GEN-LAST:event_buttonTestActionPerformed
 
+    private void buttonEx11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonEx11ActionPerformed
+          myExercise.removeListener();
+        myExercise = new EjercicioEx11(jTextPane1, jTextField1, doc);
+    }//GEN-LAST:event_buttonEx11ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -377,6 +394,7 @@ public class EjerciciosEgg extends javax.swing.JFrame {
     private java.awt.Button buttonEj21;
     private java.awt.Button buttonEx09;
     private java.awt.Button buttonEx10;
+    private java.awt.Button buttonEx11;
     private java.awt.Button buttonTest;
     private java.awt.Button cleanButton1;
     private javax.swing.JPanel jPanel1;

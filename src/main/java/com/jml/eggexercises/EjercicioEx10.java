@@ -21,11 +21,13 @@ public class EjercicioEx10 extends Exercise {
 
     public EjercicioEx10(JTextPane jTextPane1, JTextField jTextField1,Document doc) {
         super(jTextPane1, jTextField1,doc);
-        AddTextToPane("Realice un programa para que el usuario adivine el resultado de una multiplicación entre\n"
-                + "dos números generados aleatoriamente entre 0 y 10. El programa debe indicar al usuario\n"
-                + "si su respuesta es o no correcta. En caso que la respuesta sea incorrecta se debe permitir\n"
-                + "al usuario ingresar su respuesta nuevamente. Para realizar este ejercicio investigue como\n"
-                + "utilizar la función Math.random() de Java.");
+        SimpleAttributeSet set = new SimpleAttributeSet();
+        StyleConstants.setForeground(set, Color.cyan);
+        AddTextToPane("Realice un programa para que el usuario adivine el resultado de una multiplicación entre"
+                + "dos números generados aleatoriamente entre 0 y 10. El programa debe indicar al usuario"
+                + "si su respuesta es o no correcta. En caso que la respuesta sea incorrecta se debe permitir"
+                + "al usuario ingresar su respuesta nuevamente. Para realizar este ejercicio investigue como"
+                + "utilizar la función Math.random() de Java.",set);
         AddTextToPane("Vamos a generar un número entre 0 y 10 inclusive");
         secretNumber = random.nextInt(11);
 

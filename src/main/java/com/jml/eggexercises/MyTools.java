@@ -113,15 +113,25 @@ public class MyTools {
     }
     
     public static int RevertirInt(int num) {
-        
         int aux=num;
         int var = aux%10;
         while (aux>9) {
-            
             aux=Math.floorDiv(aux, 10);
             var =var*10+ aux%10;
         }
         return var;
+    }
+    
+    public static int GetNumDigits(int num) {
+        int digits=1;
+        num=Math.abs(num);
+        while(num>10) {
+            digits++;
+            num=Math.floorDiv(num, 10);
+        }
+        return digits;
+        
+        
     }
     
     

@@ -1,11 +1,14 @@
 
 package com.jml.eggexercises;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.util.Random;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
 import javax.swing.text.Document;
+import javax.swing.text.SimpleAttributeSet;
+import javax.swing.text.StyleConstants;
 
 /* @author jmlucero */
 public class Ejercicio15 extends Exercise{
@@ -15,8 +18,10 @@ public class Ejercicio15 extends Exercise{
 
     public Ejercicio15(JTextPane jTextPane1, JTextField jTextField1,Document doc) {
         super(jTextPane1, jTextField1,doc);
-        AddTextToPane("Realizar un algoritmo que rellene un vector con los 100 primeros números enteros y los\n"
-                + "muestre por pantalla en orden descendente. Presione EJECUTAR ACCION");
+        SimpleAttributeSet set = new SimpleAttributeSet();
+        StyleConstants.setForeground(set, Color.cyan);
+        AddTextToPane("Realizar un algoritmo que rellene un vector con los 100 primeros números enteros y los"
+                + "muestre por pantalla en orden descendente. Presione EJECUTAR ACCION",set);
 
     }
 

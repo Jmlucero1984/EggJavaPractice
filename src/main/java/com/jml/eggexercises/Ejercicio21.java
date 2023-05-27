@@ -1,11 +1,14 @@
 
 package com.jml.eggexercises;
 
+import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.util.Random;
 import javax.swing.JTextField;
 import javax.swing.JTextPane;
 import javax.swing.text.Document;
+import javax.swing.text.SimpleAttributeSet;
+import javax.swing.text.StyleConstants;
 
 /* @author jmlucero */
 public class Ejercicio21 extends Exercise implements IPanelPrinter {
@@ -14,13 +17,15 @@ public class Ejercicio21 extends Exercise implements IPanelPrinter {
     int[][] childMatrix;
     public Ejercicio21(JTextPane jTextPane1, JTextField jTextField1,Document doc) {
         super(jTextPane1, jTextField1,doc);
+        SimpleAttributeSet set = new SimpleAttributeSet();
+        StyleConstants.setForeground(set, Color.cyan);
         AddTextToPane("Dadas dos matrices cuadradas de números enteros, la matriz M de 10x10 y"+
                 "la matriz P de3x3, se solicita escribir un programa en el cual se compruebe si la"+
                 "matriz P está contenida dentro de la matriz M. Para ello se debe verificar si entre"+
-                "todas las submatrices de 3x3\n" +
-                "que se pueden formar en la matriz M, desplazándose por filas o columnas, existe al\n" +
-                "menos una que coincida con la matriz P. En ese caso, el programa debe indicar la fila y la\n" +
-                "columna de la matriz M en la cual empieza el primer elemento de la submatriz P.");
+                "todas las submatrices de 3x3" +
+                "que se pueden formar en la matriz M, desplazándose por filas o columnas, existe al" +
+                "menos una que coincida con la matriz P. En ese caso, el programa debe indicar la fila y la" +
+                "columna de la matriz M en la cual empieza el primer elemento de la submatriz P.",set);
 
     }
 

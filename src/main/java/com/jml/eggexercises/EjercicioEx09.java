@@ -17,10 +17,12 @@ public class EjercicioEx09 extends Exercise {
 
     public EjercicioEx09(JTextPane jTextPane1, JTextField jTextField1,Document doc) {
         super(jTextPane1, jTextField1,doc);
-           AddTextToPane("Simular la división usando solamente restas. Dados dos números enteros mayores que\n" +
-"uno, realizar un algoritmo que calcule el cociente y el residuo usando sólo restas.\n" +
-"Método: Restar el dividendo del divisor hasta obtener un resultado menor que el divisor,\n" +
-"este resultado es el residuo, y el número de restas realizadas es el cociente.");
+        SimpleAttributeSet set = new SimpleAttributeSet();
+        StyleConstants.setForeground(set, Color.cyan);
+           AddTextToPane("Simular la división usando solamente restas. Dados dos números enteros mayores que" +
+"uno, realizar un algoritmo que calcule el cociente y el residuo usando sólo restas." +
+"Método: Restar el dividendo del divisor hasta obtener un resultado menor que el divisor," +
+"este resultado es el residuo, y el número de restas realizadas es el cociente.",set);
     }
 
     @Override
