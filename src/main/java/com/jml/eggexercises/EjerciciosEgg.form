@@ -238,6 +238,7 @@
                       <Component id="buttonEx09" alignment="0" pref="51" max="32767" attributes="0"/>
                       <Component id="buttonEx10" alignment="0" pref="51" max="32767" attributes="0"/>
                       <Component id="buttonEx11" alignment="0" max="32767" attributes="0"/>
+                      <Component id="buttonEx23" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace pref="89" max="32767" attributes="0"/>
               </Group>
@@ -252,6 +253,8 @@
                   <Component id="buttonEx10" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="buttonEx11" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                  <Component id="buttonEx23" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -283,6 +286,15 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonEx11ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="java.awt.Button" name="buttonEx23">
+          <Properties>
+            <Property name="actionCommand" type="java.lang.String" value="Ex23"/>
+            <Property name="label" type="java.lang.String" value="Ex 23"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonEx23ActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
