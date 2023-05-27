@@ -31,10 +31,8 @@ public abstract class Exercise {
 
     }
 
-    protected void action(ActionEvent evt) {
-
-    }
-
+    protected abstract void action(ActionEvent evt);
+ 
     protected void removeListener() {
         jTextField.removeActionListener(myListener);
     }
@@ -47,7 +45,7 @@ public abstract class Exercise {
         }
 
     }
-
+    
     protected void AddTextToPane(String args) {
         SimpleAttributeSet set = new SimpleAttributeSet();
         try {
@@ -58,8 +56,6 @@ public abstract class Exercise {
 
     }
 
-    protected void buttonAction() {
-    }
-;
+    protected abstract void buttonAction();
 
 }

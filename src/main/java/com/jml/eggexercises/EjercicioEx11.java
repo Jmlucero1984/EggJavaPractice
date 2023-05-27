@@ -10,16 +10,18 @@ import javax.swing.text.SimpleAttributeSet;
 import javax.swing.text.StyleConstants;
 
 /* @author jmlucero */
-public class DefaultExercise extends Exercise {
+public class EjercicioEx11 extends Exercise {
 
-    public DefaultExercise(JTextPane jTextPane1, JTextField jTextField1,Document doc) {
-        super(jTextPane1, jTextField1,doc);
+    public EjercicioEx11(JTextPane jTextPane, JTextField jTextField, Document doc) {
+        super(jTextPane, jTextField, doc);
     }
 
     @Override
     protected void action(ActionEvent evt) {
+         
         AddTextToPane(jTextField.getText());
     }
+
     @Override
     protected void buttonAction() {
         SimpleAttributeSet set = new SimpleAttributeSet();
@@ -27,8 +29,5 @@ public class DefaultExercise extends Exercise {
         
         AddTextToPane("No hay accion especial implementada en esta caso.",set);
     }
- 
- 
-    
 
 }
