@@ -68,33 +68,23 @@ public class MyTools {
     }
     
     public static void PrintInPanel(IPanelPrinter panelPrinter, int[][] matrix) {
-       
         for (int[] vect : matrix) {
-    
-            
            panelPrinter.PrintInPanel(ConcatenarVector(vect));
-                    
         }
-           panelPrinter.PrintInPanel("\n");
+        panelPrinter.PrintInPanel("\n");
     }
  
-     private static String ConcatenarVector(int[] vector) {
+    private static String ConcatenarVector(int[] vector) {
         String output = "[";
-
-        for (int i : vector) {
-
-            output = output.concat("" + i + ", "); //String.valueOf()
-        }
-
+        for (int i : vector) { output = output.concat("" + i + ", ");}//String.valueOf()
         output = output.substring(0, output.length() - 2).concat("]");
         return output;
-
     }
      
      
      
      
-     public static void EncontrarSuperposiciones(IPanelPrinter panelPrinter, int[][] traveller,int [][]map){
+    public static void EncontrarSuperposiciones(IPanelPrinter panelPrinter, int[][] traveller,int [][]map){
         // int positionsToCheck = traveller.length*traveller[0].length;
          int r;
          int c;
@@ -104,25 +94,35 @@ public class MyTools {
              for (int j = 0; j < map[0].length-traveller[0].length+1; j++) {
                  check=true;
                  r=0;
-             
                  //posChecked=0;
                  do{
-                     c=0;
-                     do{
-                         if(traveller[r][c]!=map[i+r][j+c]){
+                    c=0;
+                    do{
+                        if(traveller[r][c]!=map[i+r][j+c]){
                              check=false;
-                         }
+                        }
                         c++;
-                     } while (check && c<traveller[0].length);
+                    } while (check && c<traveller[0].length);
                   r++; 
-                 } while (check && r<traveller.length );
+                } while (check && r<traveller.length );
                  if(check) {
-                     panelPrinter.PrintInPanel("Coincidencia en fila "+i+" y columna "+j+" de la matriz mayor");
-                 }
-             }
-             
-         }
-         
-     }
-
+                    panelPrinter.PrintInPanel("Coincidencia en fila "+i+" y columna "+j+" de la matriz mayor");
+                }
+            }   
+        }
+    }
+    
+    public static int RevertirInt(int num) {
+        
+        int aux=num;
+        int var = aux%10;
+        while (aux>9) {
+            
+            aux=Math.floorDiv(aux, 10);
+            var =var*10+ aux%10;
+        }
+        return var;
+    }
+    
+    
 }

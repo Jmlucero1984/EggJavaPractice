@@ -159,6 +159,7 @@
                       <Component id="buttonEj01" alignment="0" min="-2" pref="51" max="-2" attributes="0"/>
                       <Component id="buttonEj15" alignment="0" min="-2" pref="51" max="-2" attributes="0"/>
                       <Component id="buttonEj21" alignment="0" min="-2" pref="51" max="-2" attributes="0"/>
+                      <Component id="buttonTest" alignment="0" min="-2" pref="51" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace pref="89" max="32767" attributes="0"/>
               </Group>
@@ -173,7 +174,9 @@
                   <Component id="buttonEj15" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="buttonEj21" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="250" max="32767" attributes="0"/>
+                  <EmptySpace pref="216" max="32767" attributes="0"/>
+                  <Component id="buttonTest" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -204,6 +207,15 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonEj21ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="java.awt.Button" name="buttonTest">
+          <Properties>
+            <Property name="actionCommand" type="java.lang.String" value="Test"/>
+            <Property name="label" type="java.lang.String" value="Tests"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="buttonTestActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>

@@ -9,6 +9,8 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 import java.util.Timer;
 import java.util.TimerTask;
 import javax.swing.ImageIcon;
@@ -52,6 +54,24 @@ public class EjerciciosEgg extends javax.swing.JFrame {
         timer.scheduleAtFixedRate(tasknew, 0, 200);
         SimpleAttributeSet set = new SimpleAttributeSet();
         StyleConstants.setForeground(set, Color.red);
+        this.jTextField1.setFocusable(true);
+        this.jTextField1.grabFocus();
+        
+        this.jTextField1.addFocusListener(new FocusListener()  {
+            public void actionPerformed(java.awt.event.FocusEvent evt) {
+                System.out.println("EVENTO "+evt.toString());
+            }
+
+            @Override
+            public void focusGained(FocusEvent e) {
+                System.out.println("Cursor en la entrada de texto");
+            }
+
+            @Override
+            public void focusLost(FocusEvent e) {
+                System.out.println("Cursor fuera de la entrada de texto");
+            }
+        });
         
     }
 
@@ -78,6 +98,7 @@ public class EjerciciosEgg extends javax.swing.JFrame {
         buttonEj15 = new java.awt.Button();
         buttonEj01 = new java.awt.Button();
         buttonEj21 = new java.awt.Button();
+        buttonTest = new java.awt.Button();
         jPanel2 = new javax.swing.JPanel();
         buttonEx09 = new java.awt.Button();
         buttonEx10 = new java.awt.Button();
@@ -145,6 +166,14 @@ public class EjerciciosEgg extends javax.swing.JFrame {
             }
         });
 
+        buttonTest.setActionCommand("Test");
+        buttonTest.setLabel("Tests");
+        buttonTest.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonTestActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -154,7 +183,8 @@ public class EjerciciosEgg extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(buttonEj01, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(buttonEj15, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(buttonEj21, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(buttonEj21, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(buttonTest, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(89, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -166,7 +196,9 @@ public class EjerciciosEgg extends javax.swing.JFrame {
                 .addComponent(buttonEj15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(buttonEj21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(250, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 216, Short.MAX_VALUE)
+                .addComponent(buttonTest, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
 
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("EXTRAS"));
@@ -294,6 +326,11 @@ public class EjerciciosEgg extends javax.swing.JFrame {
         myExercise = new EjercicioEx10(jTextPane1, jTextField1, doc);
     }//GEN-LAST:event_buttonEx10ActionPerformed
 
+    private void buttonTestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonTestActionPerformed
+         myExercise.removeListener();
+        myExercise = new Pruebas(jTextPane1, jTextField1, doc);
+    }//GEN-LAST:event_buttonTestActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -340,6 +377,7 @@ public class EjerciciosEgg extends javax.swing.JFrame {
     private java.awt.Button buttonEj21;
     private java.awt.Button buttonEx09;
     private java.awt.Button buttonEx10;
+    private java.awt.Button buttonTest;
     private java.awt.Button cleanButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
