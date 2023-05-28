@@ -74,7 +74,7 @@ public class MyTools {
         panelPrinter.PrintInPanel("\n");
     }
  
-    private static String ConcatenarVector(int[] vector) {
+    public static String ConcatenarVector(int[] vector) {
         String output = "[";
         for (int i : vector) { output = output.concat("" + i + ", ");}//String.valueOf()
         output = output.substring(0, output.length() - 2).concat("]");
